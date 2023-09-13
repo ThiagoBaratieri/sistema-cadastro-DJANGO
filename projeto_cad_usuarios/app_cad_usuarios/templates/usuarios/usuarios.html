@@ -1,5 +1,9 @@
+{% extends 'usuarios/base.html' %}
+{% block conteudo %}
+
 <div>
-    <table>
+    <h1>Usuários Cadastrados</h1>
+    <table class="table table-borderless table-striped">
         <tr>
             <th>id</th>
             <th>nome</th>
@@ -9,7 +13,7 @@
         {% for usuario in usuarios %}
 
         <tr>
-            <td>{{usuario.id}}</td>
+            <td>{{usuario.id_usuario}}</td>
             <td>{{usuario.nome}}</td>
             <td>{{usuario.idade}}</td>
         </tr>
@@ -17,3 +21,5 @@
         {% endfor %}
     </table>
 </div>
+
+{% endblock %}
